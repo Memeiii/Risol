@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngerisol Banget</title>
+    <link rel="icon" href="asset/logo.jpg" type="image/jpeg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      .wow {
+        visibility: hidden;
+      }
+      @keyframes scroll-right {
+        from {
+          transform: translateX(-50%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      @keyframes scroll-left {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-scroll-right {
+        animation: scroll-right 40s linear infinite;
+      }
+      .animate-scroll-left {
+        animation: scroll-left 40s linear infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- header -->
+    <header
+      class="bg-white/90 backdrop-blur-sm shadow-md sticky top-0 z-50 animate__animated animate__fadeInDown"
+    >
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <!-- logo di nav -->
+        <a href="#home" class="flex items-center">
+          <img src="asset/logo.jpg" alt="Logo Risol Lezat" class="h-24 w-24" />
+        </a>
+
+        <!-- nav di pc -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="text-gray-600 hover:text-amber-600 transition"
+            >Home</a
+          >
+          <a
+            href="#produk"
+            class="text-gray-600 hover:text-amber-600 transition"
+            >Produk</a
+          >
+          <a href="#about" class="text-gray-600 hover:text-amber-600 transition"
+            >Tentang</a
+          >
+          <a
+            href="#testimoni"
+            class="text-gray-600 hover:text-amber-600 transition"
+            >Testimoni</a
+          >
+          <button
+            id="contact-btn"
+            class="text-gray-600 hover:text-amber-600 transition"
+          >
+            Kontak
+          </button>
+        </nav>
+
+        <!-- hamburger mobile -->
+        <div class="md:hidden">
+          <button
+            id="menu-btn"
+            class="text-gray-700 hover:text-amber-600 focus:outline-none"
+          >
+            <svg
+              class="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- menu di hp -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a
+          href="#home"
+          class="block py-2 px-4 text-sm text-gray-700 hover:bg-amber-50"
+          >Home</a
+        >
+        <a
+          href="#produk"
+          class="block py-2 px-4 text-sm text-gray-700 hover:bg-amber-50"
+          >Produk</a
+        >
+        <a
+          href="#about"
+          class="block py-2 px-4 text-sm text-gray-700 hover:bg-amber-50"
+          >Tentang</a
+        >
+        <a
+          href="#testimoni"
+          class="block py-2 px-4 text-sm text-gray-700 hover:bg-amber-50"
+          >Testimoni</a
+        >
+        <button
+          id="contact-btn-mobile"
+          class="block py-2 px-4 text-sm text-gray-700 hover:bg-amber-50 w-full text-left"
+        >
+          Kontak
+        </button>
+      </div>
+    </header>
+
+    <!-- gimik -->
+    <section
+      class="min-h-[60vh] flex items-center justify-center text-center bg-amber-50"
+      id="home"
+    >
+      <div class="p-6 md:p-8">
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-amber-900 mb-4 animate__animated animate__fadeInUp"
+        >
+          Risol enak, Isi Premium
+        </h2>
+        <p
+          class="text-lg md:text-xl text-gray-700 mb-8 animate__animated animate__fadeInUp animate__delay-1s"
+        >
+          Cocok untuk semua acara, dari cemilan sore hingga pesta meriah!
+        </p>
+        <a
+          href="#produk"
+          class="bg-amber-500 text-white font-bold py-3 px-6 md:px-8 rounded-full hover:bg-amber-600 transition duration-300 transform hover:scale-105 animate__animated animate__pulse animate__infinite animate__slow"
+        >
+          Pesan Sekarang
+        </a>
+      </div>
+    </section>
+
+    <!-- main -->
+    <main class="container mx-auto p-6 md:p-8 space-y-20 md:space-y-24">
+      <!-- Catalog -->
+      <section class="wow" id="produk">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Pilihan Produk Kami
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10"
+        >
+          <!-- produk 1 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl flex flex-col"
+          >
+            <img
+              src="https://i.pinimg.com/736x/60/d3/be/60d3bebbb3ef706f102c9f58187993a6.jpg"
+              alt="Ngerisol Mayo"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl md:text-2xl font-bold mb-2">Ngerisol Mayo</h3>
+              <p class="text-gray-600 mb-4 flex-grow">
+                Isi sosis, telur, dan saus mayonaise creamy dalam balutan kulit
+                risol yang mantap.
+              </p>
+              <p class="text-lg md:text-xl font-semibold text-amber-600 mb-4">
+                Rp 3.500 / pcs
+              </p>
+              <button
+                class="w-full bg-amber-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-amber-600 transition pesan-btn"
+              >
+                Pesan
+              </button>
+            </div>
+          </div>
+          <!-- produk 2 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl flex flex-col"
+          >
+            <img
+              src="https://i.pinimg.com/1200x/88/7f/cf/887fcfa52c8157a645eda15716cfeb2c.jpg"
+              alt="Ngerisol Ayam Suwir"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl md:text-2xl font-bold mb-2">
+                Ngerisol Ayam Suwir
+              </h3>
+              <p class="text-gray-600 mb-4 flex-grow">
+                Isi daging ayam suwir, saus tomat, saus sambal, dan bumbu
+                rempah.
+              </p>
+              <p class="text-lg md:text-xl font-semibold text-amber-600 mb-4">
+                Rp 3.000 / pcs
+              </p>
+              <button
+                class="w-full bg-amber-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-amber-600 transition pesan-btn"
+              >
+                Pesan
+              </button>
+            </div>
+          </div>
+          <!-- produk 3 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl flex flex-col"
+          >
+            <img
+              src="https://i.pinimg.com/736x/a4/24/81/a42481b13a5b3a7b359911abb453546c.jpg"
+              alt="Risol Bolognese"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl md:text-2xl font-bold mb-2">
+                Ngerisol Bolognese
+              </h3>
+              <p class="text-gray-600 mb-4 flex-grow">
+                Isi daging sapi cincang dengan saus bolognese klasik, dibalut
+                kulit risol renyah.
+              </p>
+              <p class="text-lg md:text-xl font-semibold text-amber-600 mb-4">
+                Rp 4.000 / pcs
+              </p>
+              <button
+                class="w-full bg-amber-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-amber-600 transition pesan-btn"
+              >
+                Pesan
+              </button>
+            </div>
+          </div>
+          <!-- produk 4 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl flex flex-col"
+          >
+            <img
+              src="asset/ChatGPT Image 27 Sep 2025, 09.00.29.png"
+              alt="Ngerisol Coklat"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl md:text-2xl font-bold mb-2">
+                Ngerisol Coklat
+              </h3>
+              <p class="text-gray-600 mb-4 flex-grow">
+                Lelehan coklat premium yang manis dan lumer di mulut.
+              </p>
+              <p class="text-lg md:text-xl font-semibold text-amber-600 mb-4">
+                Rp 3.000 / pcs
+              </p>
+              <button
+                class="w-full bg-amber-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-amber-600 transition pesan-btn"
+              >
+                Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- tentang/about -->
+      <section
+        class="wow text-center max-w-3xl mx-auto bg-white p-6 md:p-10 rounded-xl shadow-lg"
+        id="about"
+      >
+        <h2 class="text-3xl font-bold mb-4">Tentang Kami</h2>
+        <p class="text-base md:text-lg text-gray-600">
+          Kami adalah UMKM yang berdedikasi menghadirkan risol
+          <span class="font-semibold text-amber-600">homemade</span> yang tidak
+          hanya lezat, tapi juga sehat dan higienis. Setiap risol dibuat dengan
+          cinta dan bahan-bahan pilihan terbaik untuk menjamin kualitas rasa.
+        </p>
+      </section>
+
+      <!-- testi -->
+      <section id="testimoni">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Apa Kata Pelanggan?
+        </h2>
+        <div class="relative overflow-hidden space-y-8">
+          <!-- Testimoni Atas (bergerak ke kanan) -->
+          <div class="flex animate-scroll-right">
+            <!-- Original Cards -->
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=1" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Siti Aminah</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Risolnya juara! Isiannya melimpah dan rasanya pas di lidah. Cocok banget buat teman ngopi."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=2" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Budi Santoso</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Sudah langganan di sini. Risolnya selalu fresh dan enak. Pelayanannya juga ramah."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=3" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Dewi Lestari</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Risolnya renyah banget, isiannya banyak dan gak pelit. Saya suka banget! pasti pesan lagi!"</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=7" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Rina Wati</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Ngerisol Coklatnya favorit! Lumer di mulut dan bikin nagih. Harganya juga bersahabat."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=8" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Agus Setiawan</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Kualitas premium, rasa konsisten. Selalu jadi pilihan utama untuk acara keluarga."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=9" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Linda Sari</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Risol bolognese-nya mantap! Sausnya berasa banget dan dagingnya banyak. Recommended!"</p>
+              </div>
+            </div>
+            <!-- Duplicated Cards -->
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=1" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Siti Aminah</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Risolnya juara! Isiannya melimpah dan rasanya pas di lidah. Cocok banget buat teman ngopi."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=2" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Budi Santoso</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Sudah langganan di sini. Risolnya selalu fresh dan enak. Pelayanannya juga ramah."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=3" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Dewi Lestari</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Risolnya renyah banget, isiannya banyak dan gak pelit. Saya suka banget! pasti pesan lagi!"</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=7" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Rina Wati</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Ngerisol Coklatnya favorit! Lumer di mulut dan bikin nagih. Harganya juga bersahabat."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=8" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Agus Setiawan</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Kualitas premium, rasa konsisten. Selalu jadi pilihan utama untuk acara keluarga."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=9" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Linda Sari</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Risol bolognese-nya mantap! Sausnya berasa banget dan dagingnya banyak. Recommended!"</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimoni Bawah (bergerak ke kiri) -->
+          <div class="flex animate-scroll-left">
+            <!-- Original Cards -->
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=4" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Eko Prasetyo</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Pesan buat acara kantor dan semua suka. Risolnya enak, ukurannya pas, dan harganya terjangkau."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=5" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Fitriani</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Rasa bintang lima, harga kaki lima. The best risol in town!"</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=6" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Gunawan</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Anak saya suka banget sama risol coklatnya. Lumer di mulut katanya. Recommended!"</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=10" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Hendra</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Isian ayam suwirnya pedasnya pas, bumbunya meresap sempurna. Bikin ketagihan."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=11" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Indah Putri</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Packagingnya rapi dan bersih. Risolnya sampai dengan aman dan masih hangat. Mantap!"</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=12" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Joko Susilo</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Risol mayonya the best! Creamy, gurih, dan kulitnya renyah. Selalu jadi favorit."</p>
+              </div>
+            </div>
+            <!-- Duplicated Cards -->
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=4" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Eko Prasetyo</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Pesan buat acara kantor dan semua suka. Risolnya enak, ukurannya pas, dan harganya terjangkau."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=5" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Fitriani</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Rasa bintang lima, harga kaki lima. The best risol in town!"</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=6" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Gunawan</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Anak saya suka banget sama risol coklatnya. Lumer di mulut katanya. Recommended!"</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=10" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Hendra</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Isian ayam suwirnya pedasnya pas, bumbunya meresap sempurna. Bikin ketagihan."</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=11" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Indah Putri</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Packagingnya rapi dan bersih. Risolnya sampai dengan aman dan masih hangat. Mantap!"</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-80 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=12" alt="Profil" class="w-12 h-12 rounded-full mr-4"><div><p class="font-bold">Joko Susilo</p><div class="flex text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg></div></div></div>
+                <p class="text-gray-600 italic">"Risol mayonya the best! Creamy, gurih, dan kulitnya renyah. Selalu jadi favorit."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- kontak -->
+      <section
+        class="wow text-center bg-white p-6 md:p-10 rounded-xl shadow-lg"
+        id="kontak"
+      >
+        <h2 class="text-3xl font-bold mb-6">Hubungi Kami</h2>
+        <div class="space-y-4 text-lg">
+          <p class="flex items-center justify-center">
+            <span class="mr-2">📍</span> Jakarta Utara
+          </p>
+          <p class="flex items-center justify-center">
+            <span class="mr-2">📞</span> 0821-3758-0525
+          </p>
+        </div>
+        <a
+          href="https://wa.me/6282137580525?text=Halo,%20Saya%20ingin%20pesan"
+          target="_blank"
+          class="mt-8 inline-block bg-green-500 text-white font-bold py-3 px-6 md:px-8 rounded-full hover:bg-green-600 transition duration-300 transform hover:scale-105"
+        >
+          Pesan via WhatsApp
+        </a>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto py-12 px-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+        >
+          <!-- gimik -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Ngerisol Banget</h3>
+            <p class="text-gray-400">
+              Risol homemade yang lezat, sehat, dan higienis, dibuat dengan
+              bahan-bahan pilihan terbaik.
+            </p>
+          </div>
+
+          <!-- link -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Tautan Cepat</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#produk"
+                  class="text-gray-400 hover:text-white transition"
+                  >Produk</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition"
+                  >Tentang</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimoni"
+                  class="text-gray-400 hover:text-white transition"
+                  >Testimoni</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#kontak"
+                  class="text-gray-400 hover:text-white transition"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- sosmed -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Ikuti Kami</h3>
+            <div class="flex justify-center md:justify-start space-x-4">
+              <a
+                href="https://www.instagram.com/ngerisolbanget/?utm_source=ig_web_button_share_sheet"
+                class="text-gray-400 hover:text-white transition"
+              >
+                <img
+                  src="https://images.icon-icons.com/3042/PNG/512/instagram_logo_icon_189247.png"
+                  alt="Instagram"
+                  class="h-6 w-6"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-700 pt-6 text-center">
+          <p class="text-gray-500">
+            &copy; 2025 Ngerisol Banget. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- kontak -->
+    <div
+      id="contact-modal"
+      class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50 hidden"
+    >
+      <div class="bg-white p-8 rounded-lg shadow-xl relative w-96">
+        <button
+          id="close-modal-btn"
+          class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-2xl font-bold"
+        >
+          &times;
+        </button>
+        <h2 class="text-2xl font-bold text-center mb-6">Hubungi Kami</h2>
+        <div class="flex flex-col items-center space-y-6">
+          <a
+            href="https://www.instagram.com/ngerisolbanget/?utm_source=ig_web_button_share_sheet"
+            target="_blank"
+            class="flex items-center space-x-3 text-lg text-gray-700 hover:text-amber-600 transition"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+              alt="Instagram"
+              class="h-10 w-10"
+            />
+            <span>Instagram</span>
+          </a>
+          <a
+            href="https://wa.me/6282137580525?text=Halo,%20Saya%20ingin%20pesan"
+            target="_blank"
+            class="flex items-center space-x-3 text-lg text-gray-700 hover:text-amber-600 transition"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png"
+              alt="WhatsApp"
+              class="h-10 w-10"
+            />
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./public/script.js"></script>
+  </body>
+</html>
